@@ -45,6 +45,18 @@ inline T penaltyBoundToInterval(const T var, const double a, const double b,
     return static_cast<T>(0.);
   }
   return var - upper;
+  // const T penalty = static_cast<T>(1);
+  // if (var < static_cast<T>(a)) {
+  //   return penalty * (static_cast<T>(a) - var) + epsilon;
+  // } else if (var < static_cast<T>(a + epsilon)) {
+  //   return static_cast<T>(a + epsilon) - var;
+  // }
+  // if (var > static_cast<T>(b)) {
+  //   return penalty * (var - static_cast<T>(b)) + epsilon;
+  // } else if (var > static_cast<T>(b - epsilon)) {
+  //   return var - static_cast<T>(b - epsilon);
+  // }
+  // return static_cast<T>(0.);
 }
 
 template <typename T>
